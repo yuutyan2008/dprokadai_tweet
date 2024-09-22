@@ -1,0 +1,219 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ @charset "UTF-8";
+
+ /* 共通部分 */
+ html, body{
+   font-size: 100%;
+   font-family: serif;
+   height: 100%; /*  */
+   margin: 0;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+ }
+ body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ビューポート全体の高さを確保 */
+  }
+  .wrapper {
+    flex: 1; /* メインコンテンツが画面全体に広がるように設定 */
+  }
+ 
+ .background-image {
+   background-size: contain;
+   background-position: center top;
+   background-repeat: no-repeat;
+ }
+ 
+ #top {
+   /* background-image: url(../images/2023-08-13.png); */
+   height: 270px;
+   margin: 0px;
+ }
+ /* header画像をスペースいっぱいに広げる */
+ .top-picture {
+ background-position: center top;
+ background-repeat: no-repeat;
+ }
+ a{
+   text-decoration: none;
+ }
+ 
+ /* header */
+ .page-header {
+   text-align: center;
+ }
+ h1{
+   color: #ff6c94;
+ }
+ .page-title {
+   font-size: 2.5rem;
+   font-family: serif;
+ }
+ h1 p {
+   font-size: 20px;
+   /* width: 500px; */
+ }
+ .main-nav {
+   display: flex;
+   font-size: 1.25rem;
+   text-transform: none;
+   margin-top: 34px;
+ }
+ .main-nav li {
+   margin-left: 36px;
+ }
+ .nargin-nav a {
+   color: #432;
+ }
+ 
+ /* サイドバーと本文 */
+ .blog-contents {
+   /* flexbox有効化 */
+   display: flex;
+   justify-content: space-between;
+   /* text-align: left; */
+ }
+ /* サイドバー */
+ aside {
+   width: 22%;
+ }
+ 
+ /* プロフィール写真 */
+ .profile-picture {
+   font-size: 1.625rem;
+   background: #0bd;
+   border-radius: 50%;
+   color: #fff;
+   width: 100px;
+   height: 100px;
+   text-align: center;
+   position: absolute;
+   top: 0;
+   padding-top: 10px;
+ }
+ /* プロフィール写真の装飾 */
+ .profile-picture span {
+   font-size: 1rem;
+   border-top: 1px rgba(255,255,255,.5) solid;
+   padding-top: 6px;
+   display: block;
+   width: 60%;
+   margin: 0 auto;
+ }
+ h3 {
+   padding: 40px 5px 5px 10px;
+ }
+ .sub-title {
+   font-size: 1rem;
+   padding: 8px 8px 8px;
+   font-weight: normal;
+ }
+ .article-index {
+   list-style: none;
+ }
+ 
+ .article-index a{
+   color: #432;
+   /* display: block; */
+ }
+ .article-index a:hover {
+   color: #0bd;
+ }
+ /* 本文 */
+ .m-article {
+   width: 64%;
+   background-color: #ffffff;
+ }
+ /* 次ページへのリンク */
+ article a {
+   color: blue;
+   /* 下線なし */
+   text-decoration: none;
+ }
+ article a:hover {
+   color: #0bd;
+ }
+ .post-info {
+   position: relative;
+   padding-top: 4px;
+   margin-bottom: 40px;
+   text-align: center;
+ }
+ .post-title {
+   font-size: 25px;
+   font-family: "Yu Mincho", serif;
+   font-weight: normal;
+ }
+ .post-title,
+ .post-cat {
+   margin-left: 0px;
+ }
+ /* 日付を青丸に */
+ .post-date {
+   font-size: 1.625rem;
+   background: #0bd;
+   border-radius: 50%;
+   color: #fff;
+   width: 100px;
+   height: 100px;
+   text-align: center;
+   position: absolute;
+   top: 0;
+   padding-top: 10px;
+ }
+ /* 日付内の装飾 */
+ .post-date span {
+   font-size: 1rem;
+   border-top: 1px rgba(255,255,255,.5) solid;
+   padding-top: 6px;
+   display: block;
+   width: 60%;
+   margin: 0 auto;
+ }
+ .post-categoly {
+   font-size: 18px;
+ }
+ .post-centence {
+   text-align: left;
+   font-size: 20px;
+ }
+ /* .home-content p {
+   font-size: 1.125rem;
+   margin: 10px 0 42px;
+ } */
+ 
+ /* フッター */
+ footer{
+   background: #dbedf0;
+   text-align: left;
+   padding: 26px 26px;
+ }
+ footer p{
+   color: black;
+   font-size: 0.875rem;
+ }
+ footer {
+    background-color: #f8f8f8; /* フッターの背景色（任意） */
+    text-align: center;       /* テキストの中央揃え */
+    padding: 10px 0;          /* 上下の余白 */
+    position: relative;
+    bottom: 0;
+    width: 100%;             /* 横幅を全体に広げる */
+    margin-top: auto;        /* フッターをページ下部に配置 */
+  }

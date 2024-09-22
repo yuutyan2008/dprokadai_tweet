@@ -1,0 +1,24 @@
+ja:
+  activerecord:
+    errors:
+      template:
+        header:
+          one: "%{model}にエラーが発生しました"
+          other: "%{count}件のエラーが発生しました"
+        body: "次の項目を確認してください："
+      models:
+        post:
+          attributes:
+            content:
+              blank: "は空ではいけません"
+              too_short: "は短すぎます（最低%{count}文字必要です）"
+    models:
+      post: "投稿"
+    attributes:
+      post:
+        content: "内容"
+
+  errors:
+    messages:
+      too_short: "は短すぎます（最低%{count}文字必要です）"
+      blank: "を入力してください"
