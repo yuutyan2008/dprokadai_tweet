@@ -15,9 +15,9 @@
  */
  @charset "UTF-8";
 
+
  /* 共通部分 */
  html, body{
-   font-size: 100%;
    font-family: serif;
    height: 100%; /*  */
    margin: 0;
@@ -25,38 +25,28 @@
    display: flex;
    flex-direction: column;
  }
- body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* ビューポート全体の高さを確保 */
+
+  body {
+    flex: 1; /* body全体を広げる */
   }
+  
   .wrapper {
     flex: 1; /* メインコンテンツが画面全体に広がるように設定 */
+    display: flex;
+    flex-direction: column;
   }
  
- .background-image {
-   background-size: contain;
-   background-position: center top;
-   background-repeat: no-repeat;
- }
- 
- #top {
-   /* background-image: url(../images/2023-08-13.png); */
-   height: 270px;
-   margin: 0px;
- }
  /* header画像をスペースいっぱいに広げる */
  .top-picture {
  background-position: center top;
  background-repeat: no-repeat;
  }
- a{
-   text-decoration: none;
- }
  
  /* header */
  .page-header {
-   text-align: center;
+  text-align: center;
+  background-color: #f8f8f8;
+
  }
  h1{
    color: #ff6c94;
@@ -76,10 +66,10 @@
    margin-top: 34px;
  }
  .main-nav li {
-   margin-left: 36px;
+   text-align: center;
  }
  .nargin-nav a {
-   color: #432;
+   color: rgb(19, 36, 40);
  }
  
  /* サイドバーと本文 */
@@ -87,13 +77,16 @@
    /* flexbox有効化 */
    display: flex;
    justify-content: space-between;
-   /* text-align: left; */
+   flex: 1; /* 高さを広げる */
  }
  /* サイドバー */
  aside {
    width: 22%;
  }
- 
+ .profile-section {
+  padding: 10px;
+  position: relative; /* 子要素のabsolute配置に対応 */
+ }
  /* プロフィール写真 */
  .profile-picture {
    font-size: 1.625rem;
@@ -120,6 +113,7 @@
    padding: 40px 5px 5px 10px;
  }
  .sub-title {
+   position: relative;/* プロフィール画像の親要素の位置の基準とする */
    font-size: 1rem;
    padding: 8px 8px 8px;
    font-weight: normal;
@@ -137,6 +131,7 @@
  }
  /* 本文 */
  .m-article {
+
    width: 64%;
    background-color: #ffffff;
  }
@@ -193,27 +188,19 @@
    text-align: left;
    font-size: 20px;
  }
- /* .home-content p {
-   font-size: 1.125rem;
-   margin: 10px 0 42px;
- } */
  
  /* フッター */
  footer{
-   background: #dbedf0;
-   text-align: left;
-   padding: 26px 26px;
+  background-color: #f8f8f8; /* フッターの背景色 */
+  text-align: center;       /* テキストの中央揃え */
+  padding: 10px 0;          /* 上下の余白 */
+  width: 100%;             /* 横幅を全体に広げる */
+  margin-top: auto;  
+  flex-shrink: 0;
  }
  footer p{
    color: black;
    font-size: 0.875rem;
+   text-align: center;  /* テキストを中央に揃える */
  }
- footer {
-    background-color: #f8f8f8; /* フッターの背景色（任意） */
-    text-align: center;       /* テキストの中央揃え */
-    padding: 10px 0;          /* 上下の余白 */
-    position: relative;
-    bottom: 0;
-    width: 100%;             /* 横幅を全体に広げる */
-    margin-top: auto;        /* フッターをページ下部に配置 */
-  }
+ 

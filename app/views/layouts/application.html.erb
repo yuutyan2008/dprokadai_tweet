@@ -14,15 +14,14 @@
   </head>
 
   <body>
-    <!-- ヘッダーの追加 -->
+    <!-- ヘッダー -->
     <header class="page-header">
-      <h1 class="page-title">ツイート投稿</h1>
+      <h1 class="page-title">投稿</h1>
  
       <nav>
         <ul class="main-nav">
-          <li type="none"><a href="ninkatu.html"></a>aaa</li>
-          <li type="none"><a href="tensyoku.html"></a></li>
-          <li type="none"><a href="others.html"></a></li>
+          <li type="none"><a href="new.html.erb"></a>最新の投稿</li>
+          <li type="none"><a href="index.html.erb"></a>投稿一覧</li>
         </ul>
       </nav>
     </header>
@@ -35,7 +34,7 @@
       <aside class="sub-title">
 
 
-        <h3>最新のツイート</h3>
+        <h3>最新の投稿</h3>
         <ul class="article-index">
           <li><a href="#">ツイート</a></li>
           <li><a href="#">ツイート</a></li>
@@ -47,28 +46,26 @@
 
         <!-- 本文 -->
       <article class="m-article">
-    <%# ページごとの内容を表示する部分 %>
-    <%= yield %>
+        <%# ページごとの内容を表示する部分 %>
+        <%= yield %>
       </article> 
 
       <!-- 右サイドバー -->
-      <aside class="sub-title">
-        <p class="profile-picture">4/25<span>2024</span></p>
+      <aside class="sub-title profile-section">
+        <div class="profile-picture">4/25<span>2024</span></div>
         <h3>プロフィール</h3>
-        <p>性別：女性</p>
-        <p>年齢：39歳</p>
         <p>地域：関東</p>
         <p>自己紹介：</p>
       </aside>
-      </div>
-      </div>
-
+    </div>
+  </div>
 
     <!-- フッター -->
     <footer>
-      <div class="wrapper">
+      <div class="footer-wrapper">
         <p><small>&copy; 2024 blog</small></p>
       </div>
     </footer>
+
   </body>
 </html>
