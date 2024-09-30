@@ -84,8 +84,9 @@
    width: 22%;
  }
  .profile-section {
-  padding: 10px;
+  padding-top: 120px; /* プロフィール写真の高さ + 余白 */
   position: relative; /* 子要素のabsolute配置に対応 */
+  box-sizing: border-box; /* paddingの調整 */
  }
  /* プロフィール写真 */
  .profile-picture {
@@ -98,6 +99,7 @@
    text-align: center;
    position: absolute;
    top: 0;
+   left: 10px; /* サイドバー内の中央配置調整 */
    padding-top: 10px;
  }
  /* プロフィール写真の装飾 */
@@ -110,12 +112,13 @@
    margin: 0 auto;
  }
  h3 {
-   padding: 40px 5px 5px 10px;
+  padding: 0 5px 5px 10px;
+  margin-top: 10px; /* 追加 */
  }
  .sub-title {
    position: relative;/* プロフィール画像の親要素の位置の基準とする */
    font-size: 1rem;
-   padding: 8px 8px 8px;
+   /* padding: 8px 8px 8px; */
    font-weight: normal;
  }
  .article-index {
